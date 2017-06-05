@@ -44,9 +44,9 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 12,
-        minZoom: 9,
-        maxZoom: 16,
+        zoom: 10,
+        minZoom: 8,
+        maxZoom: 14,
         
 
         // The latitude and longitude to center the map (always required)
@@ -54,7 +54,7 @@ function init() {
 
         // Disables the default Google Maps UI components
         disableDefaultUI: false,
-        scrollwheel: true,
+        scrollwheel: false,
         //draggable: true,
         gestureHandling: "cooperative",
 
@@ -153,6 +153,9 @@ function init() {
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
+        url: 'https://www.google.de/maps/place/Zollhaus/@47.8142807,9.05579,13z/data=!4m12!1m6!3m5!1s0x479a67415df8d08f:0xad3556e255ca0f20!2szollhaus!8m2!3d47.8142319!4d9.0559879!3m4!1s0x0:0x62eed570d599d4fe!8m2!3d47.814264!4d9.055965?hl=en',
         icon: image
     });
+    
+    google.maps.event.addListener(beachMarker, 'click', function() {window.location.href=beachMarker.url;});
 }
