@@ -44,126 +44,100 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 15,
+        zoom: 12,
+        minZoom: 9,
+        maxZoom: 16,
+        
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(47.8032539,9.0822721), // Zollhaus
 
         // Disables the default Google Maps UI components
-        disableDefaultUI: true,
-        scrollwheel: false,
-        draggable: false,
+        disableDefaultUI: false,
+        scrollwheel: true,
+        //draggable: true,
+        gestureHandling: "cooperative",
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 29
-            }, {
-                "weight": 0.2
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 18
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 21
-            }]
-        }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "elementType": "labels.icon",
-            "stylers": [{
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
                 "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }, {
-                "weight": 1.2
-            }]
-        }]
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#46bcec"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    }]
     };
 
     // Get the HTML DOM element that will contain your map 
@@ -174,8 +148,8 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+    var image = 'img/marker-wedding.png';
+    var myLatLng = new google.maps.LatLng(47.814264,9.055965);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
