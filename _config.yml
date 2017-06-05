@@ -1,13 +1,14 @@
 # Site settings
-title: "Claudi & Thomas - Hochzeit 2018"
+title: "Wir trauen uns"
 email: thjaeckle@gmail.com
 url: https://thjaeckle.github.io/private-wed/
-description: "Diese Seite dient der Hochzeitsplanung und -vorbereitung von Claudi und Thomas"
+description: "Claudi & Thomas - Hochzeit 2018"
 
-# Color settings (hex-codes without the leading hash-tag)
+# Color settings
 color:
-  primary-dark: '#000000'
-  links: '#219ab3'
+  #primary-dark: '#82CFFD'
+  primary-dark: '#669BC3'
+  links: '#F0FFFF'
 
 # Footer settings
 footer: Thomas Jäckle
