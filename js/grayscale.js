@@ -157,5 +157,5 @@ function init() {
         icon: image
     });
     
-    google.maps.event.addListener(beachMarker, 'click', function() {window.location.href=beachMarker.url;});
+    google.maps.event.addListener(beachMarker, 'click', function() {window.open(beachMarker.url, '_blank');});
 }

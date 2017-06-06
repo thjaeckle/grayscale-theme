@@ -301,6 +301,9 @@ a:focus {
     height: 250px;
     margin-top: 0px;
 }
+#map-img {
+    display: none;
+}
 
 @media(min-width:767px) {
     .content-section {
@@ -318,6 +321,15 @@ a:focus {
     #map {
         height: 400px;
         margin-top: 0px;
+    }
+}
+
+@media print {
+    #map {
+        display: none;
+    }
+    #map-img {
+        display: block;
     }
 }
 

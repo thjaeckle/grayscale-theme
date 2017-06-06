@@ -2,7 +2,7 @@
 title: "Wir trauen uns"
 email: hochzeit@jaeckle.rocks
 url: https://thjaeckle.github.io/private-wed/
-description: "Claudi & Thomas - Hochzeit 2018"
+description: "Claudi & Thomas"
 
 # Color settings
 color:
@@ -11,7 +11,7 @@ color:
   links: '#F0FFFF'
 
 # Footer settings
-footer: Thomas Jäckle & Claudia Brandt
+footer: Thomas & Claudia
 
 # Build settings
 markdown: kramdown
