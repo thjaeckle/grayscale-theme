@@ -330,6 +330,14 @@ a:focus {
     }
     #map-img {
         display: block;
+        page-break-before: avoid;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #ort, #unterkunft {
+        page-break-before: always;
     }
 }
 
