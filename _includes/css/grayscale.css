@@ -339,6 +339,10 @@ a:focus {
     #ort, #unterkunft {
         page-break-before: always;
     }
+
+    .btn-circle {
+        display: none;
+    }
 }
 
 .btn {
