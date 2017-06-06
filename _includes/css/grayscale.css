@@ -325,13 +325,15 @@ a:focus {
 }
 
 @media print {
+    html, body { height: auto; }
+
     #map {
         display: none;
     }
     #map-img {
         display: block;
         page-break-before: avoid;
-        width: 90%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
